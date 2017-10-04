@@ -1,0 +1,34 @@
+﻿<button onclick="getOne()">GetAll</button>
+<div id="models">
+
+
+</div>
+<script type="text/javascript">
+    function loginIn() {
+        $.ajax({
+            url: "/api/AdminLogin/?username=haoli&pwd=12345",
+            type: "Get",
+            success: function (data){
+                $('#models').html("");
+            }
+        });
+
+    }
+    function getOne() {
+        $.ajax({
+            url: "/api/AdminLogin/2",
+            type: "Get",
+            success: function (data) {
+                $('#models').html("");
+                var str = data.UserName + " " + data.Gender;
+                $('<li/>', { html: str }).appendTo($('#models'));
+            }
+        }).fail(function (xhr, status, err) {
+            alert("err:" + err);
+        });
+
+    }
+
+
+
+</script>
