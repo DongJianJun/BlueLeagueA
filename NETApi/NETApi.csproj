@@ -181,6 +181,7 @@
     </Compile>
     <Compile Include="Controllers\AdminLoginController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\Default1Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OperContext.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
